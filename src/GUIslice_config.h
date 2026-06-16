@@ -87,7 +87,8 @@ extern "C" {
   //#include "../configs/ard-shld-eastrising_70_ra8876_gv.h"
   //#include "../configs/ard-shld-elegoo_28_res.h"
   //#include "../configs/ard-shld-generic1_35_touch.h"
-  //#include "../configs/ard-shld-gevino_tft.h"
+  #include "../configs/ard-shld-gevino_tft.h"     // GEVINO TFT (RA8876 + FT5206) — enabled
+  //#include "../configs/ard-shld-gevino_opto.h"
   //#include "../configs/ard-shld-ili9341_16b_touch.h"
   //#include "../configs/ard-shld-mcufriend.h"
   //#include "../configs/ard-shld-mcufriend_4wire.h"

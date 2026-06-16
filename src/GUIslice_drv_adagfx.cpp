@@ -411,6 +411,10 @@ extern "C" {
 #elif defined(DRV_DISP_ADAGFX_RA8876_GV)
   const char* m_acDrvDisp = "ADA_RA8876_GV(SPI-HW)";
   RA8876 m_disp(ADAGFX_PIN_CS, ADAGFX_PIN_RST);
+  // GEVINO: expose the (fully initialized) display instance so a sketch can use
+  // native RA8876 features that GUIslice does not wrap, e.g. flash-image DMA
+  // blits via pic(). Returns the same object GUIslice draws through.
+  RA8876* gslc_GevinoDisp(void) { return &m_disp; }
 
 // ------------------------------------------------------------------------
 #elif defined(DRV_DISP_ADAGFX_MCUFRIEND)
